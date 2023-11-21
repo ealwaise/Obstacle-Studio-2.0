@@ -1,0 +1,17 @@
+__pycache__/
+Save/Obs/*/*.json
+Save/Obs/*.json
+Save/Palettes/*.txt
+mwe.py
+Images/GRP files/
+Images/Palettes/
+Images/Terrain/tile.py
+Images/Events/ck.py
+Images/Events/Explosions/ck.py
+Images/Events/Explosions/*/*.bmp
+Images/Events/Explosions/*/*.py
+Images/Events/Walls/ck.py
+Images/Events/Walls/*/*.bmp
+Images/Events/Walls/*/*.py
+Images/Events/Teleports/*/*.bmp
+Images/Events/Teleports/*/*.py

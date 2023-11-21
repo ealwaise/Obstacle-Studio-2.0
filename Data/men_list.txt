@@ -1,0 +1,87 @@
+Terran Marine
+Terran Ghost
+Terran Vulture
+Terran Goliath
+Terran Siege Tank (Tank Mode)
+Terran SCV
+Terran Wraith
+Terran Science Vessel
+Gui Montag (Firebat)
+Terran Dropship
+Terran Battlecruiser
+Terran Civilian
+Sarah Kerrigan (Ghost)
+Alan Schezar (Goliath)
+Jim Raynor (Vulture)
+Jim Raynor (Marine)
+Tom Kazansky (Wraith)
+Magellan (Science Vessel)
+Edmund Duke (Siege Tank)
+Edmund Duke (Siege Mode)
+Arcturus Mengsk (Battlecruiser)
+Hyperion (Battlecruiser)
+Norad II (Battlecruiser)
+Terran Siege Tank (Siege Mode)
+Terran Firebat
+Terran Medic
+Zerg Zergling
+Zerg Hydralisk
+Zerg Ultralisk
+Zerg Broodling
+Zerg Drone
+Zerg Overlord
+Zerg Mutalisk
+Zerg Guardian
+Zerg Queen
+Zerg Defiler
+Zerg Scourge
+Torrasque (Ultralisk)
+Matriarch (Queen)
+Infested Terran
+Infested Kerrigan
+Unclean One (Defiler)
+Hunter Killer (Hydralisk)
+Devouring One (Zergling)
+Kukulza (Mutalisk)
+Kukulza (Guardian)
+Yggdrasill (Overlord)
+Terran Valkyrie
+Protoss Corsair
+Protoss Dark Templar
+Zerg Devourer
+Protoss Dark Archon
+Protoss Probe
+Protoss Zealot
+Protoss Dragoon
+Protoss High Templar
+Protoss Archon
+Protoss Shuttle
+Protoss Scout
+Protoss Arbiter
+Protoss Carrier
+Dark Templar (Hero)
+Zeratul (Dark Templar)
+Tassadar/Zeratul (Archon)
+Fenix (Zealot)
+Fenix (Dragoon)
+Tassadar (Templar)
+Mojo (Scout)
+Warbringer (Reaver)
+Gantrithor (Carrier)
+Protoss Reaver
+Protoss Observer
+Danimoth (Arbiter)
+Aldaris (Templar)
+Artanis (Scout)
+Rhynadon (Badlands Critter)
+Bengalaas (Jungle Critter)
+Scantid (Desert Critter)
+Kakaru (Twilight Critter)
+Ragnasaur (Ashworld Critter)
+Ursadon (Ice World Critter)
+Raszagal (Corsair)
+Samir Duran (Ghost)
+Alexei Stukov (Ghost)
+Gerard DuGalle (Battlecruiser)
+Zerg Lurker
+Infested Duran

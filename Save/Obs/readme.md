@@ -1,0 +1,1 @@
+This directory contains user's saved explosion palettes.
