@@ -6,18 +6,18 @@ from PyQt6.QtWidgets import (QMainWindow,
                              QScrollArea)
 from PyQt6.QtGui import QKeySequence
 from PyQt6.QtCore import pyqtSignal
-from ui_location import LocationLimitPopup
-from ui_location_layer import LocationLayerDialog
-from ui_explosion import ExplosionMenuDialog
-from ui import MainUIframe
-from ui_trigger import TriggerGeneratorWindow
-from ui_brush import BrushEditor
-from ui_audio import AudioMappingDialog
-from ui_shared import FileDialog
-from graphics import Location
-from view import Canvas, Display
-from obstacle import Obstacle
-import read_write
+from .ui_location import LocationLimitPopup
+from .ui_location_layer import LocationLayerDialog
+from .ui_explosion import ExplosionMenuDialog
+from .ui import MainUIframe
+from .ui_trigger import TriggerGeneratorWindow
+from .ui_brush import BrushEditor
+from .ui_audio import AudioMappingDialog
+from .ui_shared import FileDialog
+from .graphics import Location
+from .view import Canvas, Display
+from .obstacle import Obstacle
+from src import read_write
 
 class MainWindow(QMainWindow):
     """The main application window."""

@@ -12,15 +12,15 @@ from PyQt6.QtWidgets import (QWidget,
                              QListWidgetItem,
                              QDialog)
 from PyQt6.QtCore import Qt, pyqtSignal, QEvent
-from ui_shared import NamedSpinBox, DialogButton
-from brushes import (Brush,
+from .ui_shared import NamedSpinBox, DialogButton
+from .brushes import (Brush,
                      HorizontalLine,
                      VerticalLine,
                      Rectangle,
                      Square,
                      PuncturedRectangle,
                      PuncturedSquare)
-import read_write
+from src import read_write
 
 class BrushStack(QStackedWidget):
     """A stacked widget containing various brushes."""

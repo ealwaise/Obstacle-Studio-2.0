@@ -1,5 +1,5 @@
 import pandas as pd
-import read_write
+from src import read_write
 
 event_data = pd.read_csv(read_write.get_path("Event Data")).set_index("ID")
 event_data["Subtype"].fillna(value="Crashes SC", inplace=True)

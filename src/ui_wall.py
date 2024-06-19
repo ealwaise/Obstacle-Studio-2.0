@@ -7,9 +7,9 @@ from PyQt6.QtWidgets import (QFrame,
                              QButtonGroup)
 from PyQt6.QtGui import QIcon, QKeySequence
 from PyQt6.QtCore import Qt, pyqtSignal
-from ui_shared import PlayerMenu, EventMenu, RadioButton
-import read_write
-import sc_data
+from .ui_shared import PlayerMenu, EventMenu, RadioButton
+from src import read_write
+from src import sc_data
 
 class WallMenuFrame(QFrame):
     """Contains an organized collection of wall menus."""

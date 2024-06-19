@@ -12,8 +12,8 @@ from PyQt6.QtGui import (QColor,
 from PyQt6.QtCore import (QPointF,
                           QRectF,
                           QVariant)
-import sc_data
-import read_write
+from src import sc_data
+from src import read_write
 
 class Grid(QGraphicsItem):
     """A graphics item consisting of grid lines."""

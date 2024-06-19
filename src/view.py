@@ -10,14 +10,14 @@ from PyQt6.QtGui import (QColor,
 from PyQt6.QtCore import (Qt,
                           QPointF,
                           pyqtSignal)
-from graphics import (Grid,
+from .graphics import (Grid,
                       GridSnappingItemGroup,
                       BrushHighlight,
                       TerrainTile,
                       Location,
                       EventImage)
-import sc_data
-import read_write
+from src import sc_data
+from src import read_write
 
 class Canvas(QGraphicsScene):
     """A scene on which graphical items such as terrain, locations, explosions, etc. are placed."""

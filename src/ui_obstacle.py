@@ -13,13 +13,13 @@ from PyQt6.QtWidgets import (QWidget,
                              QStackedWidget)
 from PyQt6.QtGui import QKeySequence
 from PyQt6.QtCore import Qt, pyqtSignal
-from graphics import Location
-from ui_explosion import ExplosionUIframe
-from ui_wall import WallUIframe
-from ui_teleport import TeleportUIFrame
-from ui_shared import FixedWidthButton
-from ui_brush import BrushUI
-import read_write
+from .graphics import Location
+from .ui_explosion import ExplosionUIframe
+from .ui_wall import WallUIframe
+from .ui_teleport import TeleportUIFrame
+from .ui_shared import FixedWidthButton
+from .ui_brush import BrushUI
+from src import read_write
 
 class EventButton(QRadioButton):
     """A radio button used to select the type of obstacle events to edit."""

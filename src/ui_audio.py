@@ -6,10 +6,10 @@ from PyQt6.QtWidgets import (QWidget,
                              QDialog)
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt, pyqtSignal, QEvent
-from ui_shared import SCMenu, DialogButton, IconButton
-from obstacle import Obstacle
-import sc_data
-import read_write
+from .ui_shared import SCMenu, DialogButton, IconButton
+from .obstacle import Obstacle
+from src import sc_data
+from src import read_write
 
 class AudioMappingDialog(QDialog):
     """Contains widgets for mapping explosions to death counters."""

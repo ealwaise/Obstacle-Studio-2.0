@@ -1,7 +1,7 @@
 import pandas as pd
 from PyQt6.QtCore import QPointF
-import read_write
-import sc_data
+from src import read_write
+from src import sc_data
 
 class Obstacle:
     """A storage class for obstacle data."""

@@ -9,10 +9,10 @@ from PyQt6.QtWidgets import (QWidget,
                              QStackedWidget)
 from PyQt6.QtGui import QKeySequence
 from PyQt6.QtCore import Qt, pyqtSignal
-from graphics import Location
-from ui_terrain import TerrainUIframe
-from ui_location import LocationUIframe
-from ui_obstacle import ObstacleUIframe
+from .graphics import Location
+from .ui_terrain import TerrainUIframe
+from .ui_location import LocationUIframe
+from .ui_obstacle import ObstacleUIframe
         
 class GridSizeFrame(QFrame):
     """Containins a menu to adjust the grid size."""

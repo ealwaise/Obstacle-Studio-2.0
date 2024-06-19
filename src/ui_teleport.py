@@ -8,10 +8,10 @@ from PyQt6.QtWidgets import (QFrame,
                              QTableWidgetItem)
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt, pyqtSignal
-from graphics import Location
-from ui_shared import PlayerMenu, EventMenu, IconButton
-import sc_data
-import read_write
+from .graphics import Location
+from .ui_shared import PlayerMenu, EventMenu, IconButton
+from src import sc_data
+from src import read_write
 
 class TeleportMenuFrame(QFrame):
     """Contains an organized collection of wall menus."""

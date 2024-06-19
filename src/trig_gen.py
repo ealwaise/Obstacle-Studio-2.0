@@ -1,6 +1,6 @@
 from collections import deque
 import pandas as pd
-import sc_data
+from src import sc_data
 
 def deaths(player: str, unit: str, quantifier: str, num: int) -> str:
     """Returns a death count condition."""

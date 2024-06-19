@@ -12,9 +12,9 @@ from PyQt6.QtWidgets import (QFrame,
                              QFileDialog)
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt, pyqtSignal, QEvent
-from ui_shared import IconButton, PlayerMenu, EventMenu
-import sc_data
-import read_write
+from .ui_shared import IconButton, PlayerMenu, EventMenu
+from src import sc_data
+from src import read_write
 
 class ExplosionMenuDialog(QDialog):
     """Contains an organized collection of explosion menus."""

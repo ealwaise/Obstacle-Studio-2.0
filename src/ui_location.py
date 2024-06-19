@@ -14,8 +14,8 @@ from PyQt6.QtGui import QKeySequence
 from PyQt6.QtCore import (Qt,
                           QEvent,
                           pyqtSignal)
-from ui_shared import SizeFrame
-import read_write
+from .ui_shared import SizeFrame
+from src import read_write
 
 class LocationLimitPopup(QDialog):
     """A popup appearing when the user attempts to place more than 255 locations."""

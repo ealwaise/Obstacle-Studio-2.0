@@ -9,9 +9,9 @@ from PyQt6.QtWidgets import (QButtonGroup,
                              QFrame)
 from PyQt6.QtGui import QIcon
 from PyQt6.QtCore import Qt, QSize, pyqtSignal
-from ui_shared import SizeFrame
-import sc_data
-import read_write
+from .ui_shared import SizeFrame
+from src import sc_data
+from src import read_write
 
 class TileButton(QPushButton):
     """A button for selecting a terrain tile."""

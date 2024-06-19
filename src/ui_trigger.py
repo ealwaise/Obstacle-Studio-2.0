@@ -13,12 +13,12 @@ from PyQt6.QtWidgets import (QWidget,
                              QLineEdit,
                              QDialog)
 from PyQt6.QtCore import Qt, pyqtSignal
-from ui_shared import PlayerMenu, SCMenu
-from graphics import Location
-from obstacle import Obstacle
-import sc_data
-import trig_gen
-import read_write
+from .ui_shared import PlayerMenu, SCMenu
+from .graphics import Location
+from .obstacle import Obstacle
+from src import sc_data
+from src import trig_gen
+from src import read_write
 
 class PlayerMenuKeyed(PlayerMenu):
     """A player menu with an attached dictionary key for storing the menu's value."""

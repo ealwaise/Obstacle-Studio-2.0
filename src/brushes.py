@@ -12,8 +12,8 @@ from PyQt6.QtWidgets import (QWidget,
                              QListWidgetItem,
                              QDialog)
 from PyQt6.QtCore import Qt, pyqtSignal, QEvent
-from ui_shared import NamedSpinBox, DialogButton
-import read_write
+from .ui_shared import NamedSpinBox, DialogButton
+from src import read_write
 
 class Brush(QFrame):
     """Contains widgets for creating and editing regions in which obstacle events are placed."""

@@ -15,9 +15,9 @@ from PyQt6.QtCore import (Qt,
                           QVariant,
                           QEvent,
                           pyqtSignal)
-from graphics import Location
-from ui_shared import IconButton
-import read_write
+from .graphics import Location
+from .ui_shared import IconButton
+from src import read_write
 
 class LocationListItem(QListWidgetItem):
     """An item representing a location for display in a list."""
