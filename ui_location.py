@@ -172,6 +172,7 @@ class LocationIDoffsetBox(QSpinBox):
     
     def __init__(self):
         super().__init__()
+        self.setMaximum(255)
         
     def reset(self) -> None:
         """Resets the value to 0."""

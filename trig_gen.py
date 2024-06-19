@@ -215,7 +215,7 @@ def count_triggers(use_frames: bool,
             triggers.append(create_trigger(trigger_player, audio_conditions, audio_actions[1]))
     
     conditions, actions = [], deque()
-    # Conditions whcih track the ob and count numbers.
+    # Conditions which track the ob and count numbers.
     conditions.append(deaths(DC_player, ob_tracker_unit, 'Exactly', ob_num))
     conditions.append(deaths(DC_player, count_tracker_unit, 'Exactly', count_num))
 
@@ -232,33 +232,44 @@ def count_triggers(use_frames: bool,
         ID = location_IDs[loc - 1]
         center_x, center_y = location_centers[loc - 1]
         prev_x, prev_y = center_x, center_y
-        # Iterate through all explosions occuring at the given location.
-        for index, event in explosions_loc.iterrows():
-            player = get_player(event.loc['Player'])
-            explosion_ID = event.loc['Explosion']
-            x, y = event.loc['x'], event.loc['y']
+        positions = {
+            (event.loc['x'], event.loc['y']) for index, event in explosions_loc.iterrows()
+        }
+        
+        # Iterate through all positions at which an explosion occurs at the given location.
+        for (x, y) in positions:
+            explosions_loc_pos = explosions_loc[(explosions_loc['x'] == x)
+                                                & (explosions_loc['y'] == y)]
             
-            # Move the location to the position of the explosion.
-            actions.extend(move_loc(ID, [x - prev_x, y - prev_y]))
-            prev_x, prev_y = x, y
+            # Iterate through all explosions occuring at the given location and position.
+            for index, event in explosions_loc_pos.iterrows():
+                player = get_player(event.loc['Player'])
+                explosion_ID = event.loc['Explosion']
+                x, y = event.loc['x'], event.loc['y']
+                
+                # Move the location to the position of the explosion.
+                actions.extend(move_loc(ID, [x - prev_x, y - prev_y]))
+                prev_x, prev_y = x, y
+                
+                # Create the explosion.
+                # We check if the explosion is a unit, as we must otherwise create a Scanner Sweep and
+                # create a EUD action to change the image of Scanner Sweep.
+                unit = 'Scanner Sweep'
+                if is_unit(explosion_ID):
+                    unit = get_unit(explosion_ID)
+                else:
+                    sprite_used = True
+                    if explosion_ID != prev_explosion_ID:
+                        actions.append(masked_EUD_action(6710360, 'Set To', int(explosion_ID), 65535))
+                        prev_explosion_ID = explosion_ID
+                actions.append(create_unit(player, unit, 1, loc_name))
+                if kill_remove == 'Remove Unit' and unit != 'Scanner Sweep':
+                    actions.append(kill_unit_at_location(player, unit, 'All', loc_name))
             
-            # Create the explosion.
-            # We check if the explosion is a unit, as we must otherwise create a Scanner Sweep and
-            # create a EUD action to change the image of Scanner Sweep.
-            unit = 'Scanner Sweep'
-            if is_unit(explosion_ID):
-                unit = get_unit(explosion_ID)
-            else:
-                sprite_used = True
-                if explosion_ID != prev_explosion_ID:
-                    actions.append(masked_EUD_action(6710360, 'Set To', int(explosion_ID), 65535))
-                    prev_explosion_ID = explosion_ID
-            actions.append(create_unit(player, unit, 1, loc_name))
+            # Create the actions which kill the player at the given position.
             if kill_remove == "Kill Unit":
                 actions.append(kill_unit_at_location('All players', 'Men', 'All', loc_name))
             else:
-                if unit != 'Scanner Sweep':
-                    actions.append(kill_unit_at_location(player, unit, 'All', loc_name))
                 actions.append(remove_unit_at_location(force_name, bounding_unit, 'All', loc_name))
                 
         # Move the location back to its original position.
@@ -388,7 +399,6 @@ def obstacle_triggers(locations: list,
                       force_name: str,
                       comment_options: dict) -> str:
     """Generates the triggers to create an obstacle."""
-    print(ob.audio)
     triggers = []
     delays = ob.delays
     use_frames = ob.use_frames
